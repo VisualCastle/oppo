@@ -414,8 +414,8 @@ body{
                 height: var(--w-column);
                 width: 100%;
                 top: 52%;
-                border-top: 1px solid #324073;
-                border-bottom: 1px solid #324073;
+                /* border-top: 1px solid #324073;
+                border-bottom: 1px solid #324073; */
                 pointer-events: none;
             }
         }
