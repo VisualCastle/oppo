@@ -403,8 +403,8 @@ body{
                 right: var(--w-column);
                 width: var(--w-column);
                 height: 100%;
-                border-left: 1px solid #324073;
-                border-right: 1px solid #324073;
+                /* border-left: 1px solid #324073;
+                border-right: 1px solid #324073; */
                 pointer-events: none;
             }
             &::before{
