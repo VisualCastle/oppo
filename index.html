@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header>
+      <figure class="logo">
+          <img src="img/logo.png" alt="">
+      </figure>
+      <nav>
+          <ul>
+              <!-- <li>HOME</li>
+              <li>INFO</li>
+              <li>LOGIN</li> -->
+          </ul>
+      </nav>
+  </header>
+
+  <section class="carousel">
+      <div class="list">
+          <div class="item">
+              <figure>
+                  <img src="img/1.png">
+              </figure>
+              <div class="content">
+                  <p class="category">
+                      FIND
+                  </p>
+                  <h2>
+                      N3 FLIP
+                  </h2>
+                  <p class="description">
+                      Pocket Portable Fold to FitSuper portable in your palm and slips easily into your pocket; 
+                      this folding phone perfectly fits your lifestyle
+                  </p>
+                  <div class="more">
+                      <button>
+                        <label for="modal_confirm1">Specs</label>
+                      </button>
+                      <!-- Botón "See More" con una clase identificadora -->
+                      <button class="btn-see-more">
+                          <i class="fa-solid fa-play"></i> See More
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="indicators">
+          <div class="number">OPPO</div>
+      </div>
+  </section>
+
+  <!-- CONTENEDOR DEL MODAL -->
+  <div class="modalVideo" id="videoModal">
+    <div class="modal-content">
+      <!-- Botón de cierre de la ventana modal -->
+      <span class="close">&times;</span>
+      <!-- Contenedor del iframe de YouTube -->
+      <div class="video-container">
+        <!-- El src se controlará dinámicamente desde JS para incluir autoplay -->
+        <iframe 
+        id="modalVideoIframe"
+        src=""
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+      
+      </div>
+    </div>
+  </div>
+
+   <div class="modal">
+        <input type="checkbox" name="setingModal" id="modal_confirm1">
+        <div class="header">
+            <img src="img/img1.png" alt="">
+            <!-- <img src="img/img2.png" alt="">
+            <img src="img/img3.png" alt=""> -->
+        </div>
+        <div class="content">
+            <h3>General Specs</h3>
+            
+            <!-- CONTENEDOR PARA 3 COLUMNAS -->
+            <div class="specsContainer">
+              <!-- COLUMNA IZQUIERDA: TEXTO DE LA ESPECIFICACIÓN SELECCIONADA -->
+              <div class="specLeft">
+                <h4 class="specTitle">Choose an icon</h4>
+                <p class="specDescription">The specification description will appear here.</p>
+              </div>
+          
+              <!-- COLUMNA CENTRAL: 3 CÍRCULOS -->
+              <div class="specMid">
+                <div class="specCircle" 
+                     data-title="Display" 
+                     data-description="Foldable LTPO AMOLED, 120Hz, HDR10+,                      ">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div class="specCircle" 
+                     data-title="Main Camera" 
+                     data-description="Triple: 50 MP, f/1.8, 24mm (wide),32 MP, f/2.0, 47mm (telephoto), 48 MP, f/2.2, 14mm, 114˚ (ultrawide) ">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+                <div class="specCircle"
+                     data-title="Memory"
+                     data-description="12GB de RAM">
+                  <i class="fa-solid fa-memory"></i>
+                </div>
+              </div>
+          
+              <!-- COLUMNA DERECHA: 3 CÍRCULOS -->
+              <div class="specRight">
+                <div class="specCircle"
+                     data-title="Battery"
+                     data-description="Li-Po 4300 mAh, 44W wired, 50% in 23 min">
+                  <i class="fa-solid fa-battery-half"></i>
+                </div>
+                <div class="specCircle"
+                     data-title="OS"
+                     data-description="Android 13, up to 4 major Android upgrades, ColorOS 14">
+                  <i class="fa-brands fa-android"></i>
+                </div>
+                <div class="specCircle"
+                     data-title="Storage"
+                     data-description="256GB, 512GB ">
+                  <i class="fa-solid fa-hdd"></i>
+                </div>
+              </div>
+            </div>
+          
+            <div class="confirm">
+              <label for="modal_confirm1" class="cancel">Close</label>
+            </div>
+        </div>
+          
+        
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
