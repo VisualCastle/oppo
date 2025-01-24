@@ -16,27 +16,36 @@ let firstPosition = 0;
 let lastPosition = items.length - 1;
 let autoPlay;
 
-const startAutoPlay = () => {
-    clearInterval(autoPlay);
-    autoPlay = setInterval(() => {
-        // nextBtn.click();
-    }, 5000);
-}
-startAutoPlay();
+// const startAutoPlay = () => {
+//     clearInterval(autoPlay);
+//     autoPlay = setInterval(() => {
+//         // nextBtn.click();
+//     }, 5000);
+// }
+// startAutoPlay();
+
+// const setSlider = () => {
+//     let itemActiveOld = carousel.querySelector('.list .item.active');
+//     if(itemActiveOld) itemActiveOld.classList.remove('active');
+//     items[active].classList.add('active');
+
+//     let dotActiveOld = indicator.querySelector('.indicators ul li.active');
+//     if(dotActiveOld) dotActiveOld.classList.remove('active');
+//     // dots[active].classList.add('active');
+
+//     // indicator.querySelector('.number').innerText = 'OPPO';
+//     startAutoPlay();
+// }
 
 const setSlider = () => {
-    let itemActiveOld = carousel.querySelector('.list .item.active');
-    if(itemActiveOld) itemActiveOld.classList.remove('active');
-    items[active].classList.add('active');
+  let itemActiveOld = carousel.querySelector('.list .item.active');
+  if(itemActiveOld) {
+    itemActiveOld.classList.remove('active');
+  }
+  items[active].classList.add('active');
+  // No llamamos a startAutoPlay si no queremos autoplay
+};
 
-    let dotActiveOld = indicator.querySelector('.indicators ul li.active');
-    if(dotActiveOld) dotActiveOld.classList.remove('active');
-    // dots[active].classList.add('active');
-
-    // indicator.querySelector('.number').innerText = 'OPPO';
-    startAutoPlay();
-}
-setSlider();
 
 // Recorremos cada círculo y añadimos el evento
 specCircles.forEach(circle => {
@@ -115,4 +124,16 @@ modal.addEventListener('click', (e) => {
     modal.classList.remove('show');
     iframe.src = '';
   }
+});
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  // Asegúrate de que "active" sea el index del slide inicial
+  active = 0;
+
+  // Forzamos la dirección de la animación desde la derecha
+  carousel.style.setProperty('--calculation', 1);
+
+  // Mostramos el primer slide con animación
+  setSlider();
 });
