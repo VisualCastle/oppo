@@ -32,7 +32,7 @@ const setSlider = () => {
   if(dotActiveOld) dotActiveOld.classList.remove('active');
   dots[active].classList.add('active');
 
-  indicator.querySelector('.number').innerText = '0' + (active + 1);
+  indicator.querySelector('.number').innerText = 'OPPO' ;
   startAutoPlay();
 }
 setSlider();
