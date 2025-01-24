@@ -4,6 +4,7 @@ let carousel = document.querySelector('.carousel');
 let items = carousel.querySelectorAll('.list .item');
 let indicator = carousel.querySelector('.indicators');
 let dots = indicator.querySelectorAll('.indicators ul li');
+const specsModalCheckbox = document.getElementById('modal_confirm1');
 
 const specCircles = document.querySelectorAll('.specCircle');
 // Referencias al título y descripción de la columna izquierda
@@ -19,7 +20,7 @@ const startAutoPlay = () => {
   clearInterval(autoPlay); 
   autoPlay = setInterval(() => {
       nextBtn.click();
-  }, 5000);
+  }, 7000);
 }
 startAutoPlay();
 
@@ -74,6 +75,18 @@ dots.forEach((item, position) => {
         setSlider();
     }
 })
+
+specsModalCheckbox.addEventListener('change', () => {
+  if (specsModalCheckbox.checked) {
+    // El checkbox está marcado => modal abierto
+    // => Detén el autoplay
+    clearInterval(autoPlay);
+  } else {
+    // El checkbox está desmarcado => modal cerrado
+    // => Vuelve a iniciar el autoplay
+    startAutoPlay();
+  }
+});
 
 
 // ========== NUEVO CÓDIGO PARA EL MODAL DE VIDEO ==========
